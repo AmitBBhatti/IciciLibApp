@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
+        <variable
+            name="homedata"
+            type="com.fitpass.libfitpass.home.viewmodel.FitpassIciciViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue2"
+        >
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="162dp"
+            android:src="@drawable/intersection"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"/>
+        <include
+            android:id="@+id/rlHeader"
+            layout="@layout/fitpass_header"
+            />
+        <LinearLayout
+            android:id="@+id/llDetail"
+            android:layout_below="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:id="@+id/llTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                >
+                <LinearLayout
+                    android:id="@+id/llUpcommig"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvUpcomming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orangedark"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/upcomingworkout"/>
+                    <View
+                        android:id="@+id/viewUpcomming"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/orangedark"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCompleted"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    >
+                    <TextView
+                        android:id="@+id/tvCompleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/completedworkout"/>
+                    <View
+                        android:id="@+id/viewCompleted"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/orangedark"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+
+                />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlAlert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <include android:id="@+id/alertpopup"
+                layout="@layout/alert_popup"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

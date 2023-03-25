@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color" />
+        <import type="com.fitpass.libfitpass.base.utilities.Util" />
+        <variable
+            name="faqdata"
+            type="com.fitpass.libfitpass.home.icicimenumodel.List" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_gradient"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="12dp">
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@{faqdata.question}"
+                    android:textColor="@color/dark_blue3"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_bold"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlHeader"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="1dp"
+                android:textColor="@color/bluegrey"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                android:id="@+id/tvArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/orangedark" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <color name="start_workout_color">#635ace</color>
+    <color name="center_workout_color">#5770df</color>
+    <color name="end_workout_color">#5989ec</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple1">#615ed1</color>
+    <color name="black">#000</color>
+    <color name="green">#51d071</color>-->
+   <color name="orange">#f69b36</color>
+   <color name="grey4">#b4bbc2</color>
+   <color name="grey2">#eef0f2</color>
+    <color name="grey1">#839ab2</color>
+    <color name="magenta">#625986</color>
+    <color name="black2">#0b1f34</color>
+    <color name="bluegrey">#627596</color>
+    <color name="blue">#004fb5</color>
+    <color name="blue2">#92b7ff</color>
+    <color name="blue3">#0099dd</color>
+
+
+    <!--
+    <color name="pink">#f873b4</color>-->
+    <color name="pink1">#da4361</color>
+    <color name="pink2">#ef78ba</color>
+    <color name="lightpink">#ffebf5</color>
+   <color name="grey3">#e5e5e5</color>
+ <color name="black1">#091f35</color>
+  <!--  <color name="transparent">#00ffffff</color>
+    <color name="transparentNew">#00000000</color>
+    <color name="transparent3">#80000000</color>
+    <color name="watermelon_two">#ef4c4f</color>-->
+    <color name="transparent2">#dfdedf</color>
+   <!-- <color name="color_scan_start">#d92a5c</color>
+    <color name="color_scan_end">#a7008f</color>-->
+
+
+   <color name="blue4">#30297f</color>
+    <color name="colorPrimary">#302c57</color>
+    <color name="blue_cursor">#2874f0</color>
+    <color name="colorPrimaryDark">#5a587e</color>
+    <color name="colorAccent">#303F9F</color>
+    <color name="fp_bg_grey">#29000000</color>
+    <color name="pink_outer">#f95b95</color>
+    <color name="macaroni_and_cheese">#f7af2d</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="graywhite">#f4f5f9</color>
+    <color name="peacock_blue">#004fb5</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_type_2">#031e34</color>
+    <color name="black_type_2_50">#80031e34</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="mild_pinkish">#ffebf5</color>
+    <color name="mild_grey">#839ab2</color>
+
+    <color name="light_purple">#6572ec</color>
+    <color name="turquoise_blue">#0badb2</color>
+
+
+    <color name="black_80">#44000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="dark_indigo">#0b1f34</color>
+    <color name="dark_indigo_two">#0b1f35</color>
+    <color name="dark_grey_blue">#2a2e54</color>
+    <color name="carolina_blue">#92b7ff</color>
+    <color name="dark_pink">#f93397</color>
+    <color name="dark_purpel">#9808a2</color>
+
+    <color name="protine_blue">#7fb3e9</color>
+    <color name="carb_yellow">#ffe788</color>
+    <color name="fiber_gree">#88e09e</color>
+    <color name="fat_red">#ff9190</color>
+    <color name="dim_yellow">#FFFDF2</color>
+
+    <color name="corporate_grey_text">#787D82</color>
+    <color name="corporate_blue_text">#130D56</color>
+    <color name="material_grey_900">#440f1f2e</color>
+    <color name="divider_grey">#EBEBEB</color>
+    <color name="divider_grey_2">#F0F0F0</color>
+    <color name="divider_grey_3">#F4F4F4</color>
+    <color name="light_grey_2">#E5E5E5</color>
+    <color name="light_grey">#F2F2F2</color>
+    <color name="text_grey">#b2bacc</color>
+   <color name="red">#f26f6e</color>
+    <!--<color name="red">#EF4B51</color>-->
+    <color name="emoji_happy">#c5f0d0</color>
+    <color name="grey_50">#80878f96</color>
+    <color name="amber">#F5A623</color>
+    <color name="progress_color">#81c8f6</color>
+    <color name="blue5">#49C0F8</color>
+    <color name="blue6">#46a0f8</color>
+    <color name="C0078ff">#0078ff</color>
+    <color name="C4e8af1">#4e8af1</color>
+    <color name="amberDark">#bd7700</color>
+    <color name="blue_grey_2">#65799b</color>
+    <color name="light_green">#21D36C</color>
+
+    <color name="lightgreen">#21D36C</color>
+    <color name="light_green_2">#5de194</color>
+    <color name="light_green_3">#44D882</color>
+    <color name="light_green4">#dbf8e7</color>
+    <color name="dotted_payment_green_bg">#e8fbf0</color>
+
+    <color name="status_bar_color">#1A000000</color>
+    <color name="player_status_bar_color">#0C000000</color>
+    <color name="statusbar_splash">#de4d5a</color>
+    <color name="pink">#de4871</color>
+    <color name="notattended_feedback">#d34569</color>
+    <color name="challenge_background">#2c7057</color>
+    <color name="navy_grey">#657498</color>
+    <color name="dark_grey_status_bar">#5a587e</color>
+    <color name="dark_blue">#302c57</color>
+    <color name="dark_blue_50">#80302c57</color>
+    <color name="blue_grey">#2c3d52</color>
+    <color name="blue_30">#4D252a40</color>
+    <color name="grey_2">#aaaaaa</color>
+    <color name="purple">#8d4daa</color>
+    <color name="button_green">#21d36c</color>
+    <color name="button_grey">#BEBEBE</color>
+    <color name="button_green1">#21d36c</color>
+    <color name="light_blue">#657498</color>
+    <color name="Green">#00a674</color>
+    <color name="green_2">#e6fff1</color>
+
+    <color name="red_alert">#f2494d</color>
+    <color name="white_transparent">#80ffffff</color>
+    <color name="grey_transparent">#28353535</color>
+    <color name="C657498">#657498</color>
+
+   <!-- <color name="grey2">#33afafaf</color>-->
+
+  <!--  <color name="blue4">#2f3661</color>-->
+    <color name="grey7">#efefef</color>
+
+   <!-- <color name="grey3">#afafaf</color>-->
+    <color name="light_transparent">#929292</color>
+    <color name="grey_transparent1">#80ffffff</color>
+    <color name="white_50_transparent">#80ffffff</color>
+    <color name="white_40">#66ffffff</color>
+    <color name="grey6">#afafaf</color>
+    <color name="white_70">#B3ffffff</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparentNew">#00000000</color>
+    <color name="blue_50">#80657699</color>
+    <color name="ftv_live_transparent">#010311</color>
+
+    <!--<color name="black1">#14283f</color>-->
+    <color name="black1_30">#4D14283f
+    </color>
+    <color name="black_2">#0f1f2e</color>
+    <color name="black_2_50">#800f1f2e
+    </color>
+    <color name="red2">#e54950</color>
+    <color name="text_grey_dark_50">#802f1e5b</color>
+    <color name="signin_statusbar">#5a587e</color>
+    <color name="signin_statusbarr">#130D56</color>
+
+    <color name="status_bar_color_third">#64356d</color>
+
+
+    <color name="white_light">#fbfafb</color>
+    <color name="profile_status">#6b7d9e</color>
+    <color name="status_color">#3E307C</color>
+    <color name="status_color_predict">#232882</color>
+    <color name="status_color_new">#06252a40</color>
+    <color name="light_gray">#80D3D3D3</color>
+    <color name="status_color_trans">#243E307C</color>
+    <color name="graph_pink">#f54ea2</color>
+    <color name="status_yellow">#fcb97a</color>
+    <color name="black_20">#33000000</color>
+    <color name="workout_listing_blue">#7196d1</color>
+    <color name="workout_history_purple">#555e7e</color>
+    <color name="grey">#fbfbfc</color>
+    <color name="white_grey">#f1f3f5</color>
+    <color name="greydivider">#e2e5ea</color>
+    <color name="navy_blue_1">#2f3661</color>
+    <color name="purple_text">#802f1e5b</color>
+
+    <color name="pink_blogs">#E6327A</color>
+    <color name="grey_toolbar">#717f96</color>
+
+    <color name="C302c57">#302c57</color>
+    <color name="fitcoachStatusbar">#5d4bc3</color>
+    <color name="C2f1f5b">#2f1f5b</color>
+    <color name="C992f1e5b">#992f1e5b</color>
+    <color name="C0f1f2e">#0f1f2e</color>
+    <color name="C252a40">#26252a40</color>
+    <color name="shadowstartcolor">#80000000</color>
+    <color name="refereaernstatus">#A57F1B</color>
+    <color name="C21d36c">#21d36c</color>
+    <color name="Cf3f3f3">#f3f3f3</color>
+    <color name="Cfebe06">#febe06</color>
+    <color name="lightgrey">#80000000</color>
+    <color name="c2fb372">#2fb372</color>
+    <color name="cde4871">#de4871</color>
+    <color name="c802f1e5b">#802f1e5b</color>
+    <color name="Cf77904">#f77904</color>
+    <color name="C99302c57">#99302c57</color>
+
+    <color name="Ccecece">#cecece</color>
+    <color name="CB3b3b3">#b3b3b3</color>
+    <color name="Cffcc40">#ffcc40</color>
+    <color name="Ca1822f">#a1822f</color>
+    <color name="C802f1e5b">#802f1e5b</color>
+    <color name="C5e2563">#5e2563</color>
+    <color name="Cde4871">#de4871</color>
+    <color name="C979797">#979797</color>
+    <color name="C5f386f">#5f386f</color>
+    <color name="Ccc302c57">#cc302c57</color>
+    <color name="Ce84b69">#e84b69</color>
+    <color name="C2f3661">#2f3661</color>
+    <color name="Ceda144">#eda144</color>
+    <color name="Cf76b1c">#f76b1c</color>
+    <color name="Cf6549d">#f6549d</color>
+
+    <color name="C65799b">#5B6D8B</color>
+    <color name="C9179f7">#9179f7</color>
+    <color name="Ceff1f4">#eff1f4</color>
+    <color name="C303395">#303395</color>
+    <color name="C12000000">#12000000</color>
+    <color name="CFF7878">#FF7878</color>
+    <color name="Cd8d8d8">#d8d8d8</color>
+    <color name="profile_status_new">#65799b</color>
+
+    <color name="textYellowSC">#F7BE1E</color>
+    <color name="orderDetailBlueBg">#166187</color>
+    <color name="greenProcesButton">#08C051</color>
+    <color name="greyOrderHolder">#707070</color>
+    <color name="greyOrderDetailText">#9B999A</color>
+    <color name="bluetextFitPlans">#1240AD</color>
+
+    <color name="corporateStatus">#000A34</color>
+    <color name="subscription_cancel_bg">#162b48</color><!--162b48-->
+    <color name="subscription_blue_text">#2e276e</color>
+    <color name="camera_preview">#7F000000</color>
+    <color name="aui_grey">#a6a6a6</color>
+    <color name="pinkish_second">#ffebf5</color>
+    <color name="redOTP">#ef4a4e</color>
+    <color name="verifyDeviceTopBg">#d1d1d1</color>
+
+    //todo for add some more colors in app for payment new design
+    <color name="dark_slate_blue">#2f1e5b</color>
+    <color name="view_color">#e8e8e8</color>
+    <color name="gray_card_payment">#f6f6f6</color>
+    <color name="lite_gray">#f9f9f9</color>
+    <color name="live_tv_toolbar">#1A1F32</color>
+    <color name="live_tv_toolbar_lite">#9A1D2337</color>
+
+    <color name="workout_view_bg">#1492E6</color>
+    <color name="workout_comment_bg">#10101099</color>
+    <color name="fitpass_tv_bg_home">#150847</color>
+    <color name="home_join_tv">#1476C6</color>
+    <color name="red_join">#EF4C4F</color>
+    <color name="invite_alert_text">#2A2D38</color>
+    <color name="past_view_color">#171717</color>
+    <color name="player_live_gray_bg">#D8D5D6</color>
+    <color name="fit_text_col">#004fb5</color>
+    <color name="pale_grey">#eef0f2</color>
+
+    <color name="view_lite">#d3dade</color>
+    <color name="view_dark">#004fb5</color>
+    <color name="readygo_black">#091f35</color>
+    <color name="feedback_emogi_unselect_color">#66091f35</color>
+    <color name="feedback_emogi_select_color">#f4c534</color>
+    <color name="fitcoachpt_text_color">#091f35</color>
+
+    <color name="reserve_color">#625986</color>
+    <color name="workout_home_color">#92b7ff</color>
+    <color name="consult_color">#ff8fab</color>
+    <color name="live_class_color">#bfa2ff</color>
+    <color name="fitpass_tv_color">#30297f</color>
+
+    <color name="fit_centre_color">#625986</color>
+    <color name="fitfeast_color">#ff8fab</color>
+    <color name="fitcoach_color">#92b7ff</color>
+
+
+    <color name="fitpass_color">#fbf1f7</color>
+    <color name="fitprime">#0d3c00ff</color>
+
+    <color name="start_workout_color">#635ace</color>
+    <color name="center_workout_color">#5770df</color>
+    <color name="end_workout_color">#5989ec</color>
+
+    <color name="meal_log_color">#cff6de</color>
+    <color name="weight_log_color">#ffebeb</color>
+    <color name="water_log_color">#f1f9ff</color>
+    <color name="hra_log_color">#ffffff</color>
+    <color name="blue_grey1">#627596</color>
+
+
+    <color name="sub_text_color">#ff3651</color>
+    <color name="meal_button_color">#1476c6</color>
+    <color name="notice_back_color">#22223b</color>
+    <color name="notice_heading_color">#ff3636</color>
+    <color name="renewal_background_color">#ffe682</color>
+    <color name="renewal_button_color">#1476c6</color>
+
+    <color name="subscribe_start_color">#da4677</color>
+    <color name="subscribe_center_color">#c01575</color>
+    <color name="subscribe_end_color">#b31892</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_tab_diable">#7c7c7c</color>
+    <color name="color_tab_enable">#004fb5</color>
+
+    <color name="color_scan_start">#d92a5c</color>
+    <color name="color_scan_end">#a7008f</color>
+    <color name="black_color">#8022223b</color>
+
+    <color name="new_filter_color">#091f35</color>
+    <color name="darkish_pink_two">#de4871</color>
+    <color name="fitfeast_progressbar_color">#f873b4</color>
+    <color name="orange_clr">#f9962e</color>
+    <color name="C612768">#612768</color>
+
+    <color name="timeColor">#627596</color>
+    <color name="lightpurple">#dfd4e1</color>
+    <color name="light_grey_one">#aaa8a8</color>
+    <color name="sea_blue">#060a75</color>
+
+    <color name="hint_active_color">#0b1f34</color>
+
+    <color name="data_not_found_message_color">#0b1f34</color>
+    <color name="hint_inactive_color">#cdcdcd</color>
+
+    <color name="dusty_lavender">#c3a9c6</color>
+    <color name="black_0_40">#66000000</color>
+    <color name="blue_grey_two">#627596</color>
+    <color name="pinkish_grey">#bcbcbc</color>
+    <color name="watermelon_two">#ef4c4f</color>
+    <color name="green_profile">#49c179</color>
+    <color name="green_workout_bg">#51d071</color>
+    <color name="darkish_pink">#da4361</color>
+
+    <color name="web_view_status_color">#5c6e8d</color>
+    <color name="pale_grey_two">#eef0f2</color>
+    <color name="yellow">#fad800</color>
+    <color name="green">#51d071</color>
+    <color name="second_green">#00d12a</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="light_blue1">#3eb0bb</color>
+   <!-- <color name="orange">#f69b36</color>-->
+    <color name="orange2">#e09b20</color>
+    <color name="orange3">#fff8ec</color>
+    <color name="orange4">#f7af2d</color>
+
+
+   <!-- <color name="blue">#034580</color>-->
+    <color name="skyblue">#d5ebff</color>
+
+   <!-- <color name="black2">#091f34</color>
+   <color name="black4">#091f36</color>-->
+    <color name="gray1">#33150847</color>
+    <color name="purple1">#615ed1</color>
+    <color name="groundnut">#ffdebb</color>
+    <color name="purple3">#612768</color>
+
+    <color name="windowcolor">#fbfbfb</color>
+    <color name="gray">#65799b</color>
+    <color name="orange1">#FFC458</color>
+    <color name="orange5">#D58D0C</color>
+    <color name="blue1">#92b7fb</color>
+
+   <!-- <color name="grey4">#e5e5e5</color>-->
+    <color name="transparent3">#80000000</color>
+
+    <color name="dark_grey">#424242</color>
+    <color name="orangedark">#e77817</color>
+    <color name="dark_blue2">#00305a</color>
+    <color name="dark_blue3">#053c6d</color>
+    <color name="black3">#1c1c1c</color>
+    <color name="green3">#00af2f</color>
+    <color name="black4">#585858</color>
+    <color name="gray2">#f7f5f5</color>
+    <color name="gray3">#cecece</color>
+</resources>

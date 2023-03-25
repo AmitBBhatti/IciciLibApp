@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
+        <variable
+            name="homedata"
+            type="com.fitpass.libfitpass.home.viewmodel.FitpassIciciViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue2"
+        >
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="162dp"
+            android:src="@drawable/intersection"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"/>
+        <include
+            android:id="@+id/rlHeader"
+            layout="@layout/fitpass_header"
+            />
+        <LinearLayout
+            android:id="@+id/llDetail"
+            android:layout_below="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

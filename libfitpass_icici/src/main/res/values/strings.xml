@@ -1,0 +1,49 @@
+<resources>
+    <string name="scannow">Scan now</string>
+    <string name="reserverworkout">Reserve your workouts</string>
+    <string name="reserverworkoutmsg">Explore gyms and studios near you and Get. Set. Sweat.</string>
+    <string name="fircoach">FitCoach</string>
+    <string name="fircoachmsg">A.I led smart fitness coach that adapts to your needs</string>
+    <string name="logameal">Log a meal</string>
+    <string name="logamealmsg">Track your calorie intake</string>
+    <string name="chatwithnut">Chat With Nutritionist</string>
+    <string name="chatwithnutmsg">Clear your doubts and queries</string>
+    <string name="scheduleacall">Schedule A Call</string>
+    <string name="scheduleacallmsg">Speak with our certified nutritionists</string>
+    <string name="fitpasstv">FITPASS-TV</string>
+    <string name="fitpasstvmsg">Go live from Home with your favorite trainers working out from their homes</string>
+    <string name="freqaskquest">Frequently Asked Questions</string>
+    <string name="open_chat_box"><u>Open chat</u></string>
+    <string name="try_now"><u>Try again</u></string>
+    <string name="scanqrcode">Scan QR CODE</string>
+    <string name="flash">Flash</string>
+    <string name="scanfromgallery">Scan from \ngallery</string>
+    <string name="refreshlocation">Refresh \nlocation</string>
+    <string name="showqrcode">Show your QR code</string>
+    <string name="needhelp">Need Help</string>
+    <string name="yourqrcode">Your QR code</string>
+    <string name="no_internet">Please check your internet connection</string>
+
+    <!-- <string name="cameramsg">We need to allow the camera permission to scan the QR Code. Do you want to allow it.</string>
+   -->
+    <string name="cameramsg">FITPASS would like to access the camera to scan the QR code and help you enjoy your workout</string>
+
+    <!--<string name="locationmsg">We need to allow the location permission. Do you want to allow it.</string>
+    -->
+    <string name="locationmsg">We require your location to show the nearby gyms &amp; studios.</string>
+    <string name="turnonlocation">Turn On Location Services</string>
+    <string name="turnoncamera">Turn On Camera Services</string>
+    <string name="vendormsg">Vendor id is missing</string>
+    <string name="policymsg">Policy number is missing</string>
+    <string name="membermsg">Member id is missing</string>
+    <string name="myworkout">My Workouts</string>
+    <string name="qrscan">QR Scan</string>
+    <string name="viewmore"><u>View More</u></string>
+    <string name="upcomingworkout">Upcoming Workout</string>
+    <string name="completedworkout">Completed Workout</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

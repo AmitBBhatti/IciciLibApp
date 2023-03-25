@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="22dp"
+            >
+            <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                android:id="@+id/faBack"
+                fitpassicicifonticon="@{FontIconConstant.INSTANCE.ICON_BACK}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orangedark"
+                android:textSize="18dp"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Fitpass"
+            android:textAllCaps="true"
+            android:textColor="@color/orangedark"
+            android:textSize="24sp"
+            android:includeFontPadding="false"
+            android:layout_marginTop="22dp"
+            android:paddingBottom="10dp"/>
+
+
+
+
+    </RelativeLayout>
+</layout>

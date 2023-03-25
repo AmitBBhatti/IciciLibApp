@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+
+<androidx.cardview.widget.CardView
+  android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:id="@+id/cv_challenges_all_list_item"
+    android:fitsSystemWindows="true"
+    app:cardCornerRadius="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent">
+
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_banner"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:id="@+id/iv_banner"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/challenge_bg_img" />
+            <LinearLayout
+                android:id="@+id/rl_challenge_type"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_circle"
+                >
+
+                <com.fitpass.libfitpass.fontcomponent.FontAwesome
+                    android:id="@+id/fa_challenge_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#612768" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="bottom|right">
+                <TextView
+                    android:id="@+id/tv_invited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spf_prodisplay_regular"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@+id/fa_invited"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="5dp"
+                    android:includeFontPadding="false"
+                    android:gravity="end"
+                    android:text="invited"/>
+
+                <com.fitpass.libfitpass.fontcomponent.FontAwesome
+                    android:id="@+id/fa_invited"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:textSize="15sp"
+                    android:padding="1dp"
+                    android:includeFontPadding="false"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center"
+                    android:background="@drawable/white_circle"
+                    android:textColor="@color/timeColor" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_days_of_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_banner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10.5dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/spf_pro_display_bold"
+            android:text="15 day challenge"
+            android:textColor="@color/readygo_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_members_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/tv_days_of_challenge"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            >
+            <com.fitpass.libfitpass.fontcomponent.FontAwesome
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/blue_grey1"
+                android:textSize="16sp"
+                android:layout_marginBottom="-2dp"
+                android:id="@+id/fa_calendar"/>
+
+            <TextView
+                android:id="@+id/tv_days"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/spf_prodisplay_regular"
+                android:includeFontPadding="false"
+                android:text="2 days to go"
+                android:gravity="bottom"
+                android:textColor="@color/readygo_black"
+                android:textSize="12sp"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="4dp"
+                android:textStyle="normal" />
+
+            <com.fitpass.libfitpass.fontcomponent.FontAwesome
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_grey1"
+                android:textSize="16sp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-2dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/fa_members"/>
+            <TextView
+                android:id="@+id/tv_members"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/spf_prodisplay_regular"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:paddingBottom="4dp"
+                android:text="memeber"
+                android:textColor="@color/readygo_black"
+                android:layout_marginLeft="5dp"
+                />
+            <View
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="right"
+                android:fontFamily="@font/spf_pro_display_bold"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:text="VIEW"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2sp"
+                android:letterSpacing="0.08"
+                android:textAllCaps="false"
+                android:textColor="@color/fit_text_col"
+                android:background="@drawable/blue_border_round_corner_bg"
+                />
+            <View
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>
+

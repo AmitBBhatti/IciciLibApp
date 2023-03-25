@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="android.graphics.Color" />
+
+        <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
+
+        <import type="com.fitpass.libfitpass.base.utilities.Util" />
+
+        <variable
+            name="workout"
+            type="com.fitpass.libfitpass.home.icicimenumodel.Workoutlist" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/llDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_gradient"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingRight="10dp"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="@dimen/_16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:layout_marginRight="@dimen/_50dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black3"
+                android:textSize="14sp"
+                tools:text="Title"
+                textdata="@{workout.studio_name}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_blue3"
+                android:textSize="12sp"
+                tools:text="Gym Workout For Women"
+                textdata="@{workout.workout_name}"
+                android:layout_marginTop="2dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/orangedark"
+                    android:textSize="10sp"
+                    textdata="@{workout.workout_label}"
+                    tools:text="Upcoming"
+                    android:layout_marginRight="5dp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black4"
+                    android:textSize="10sp"
+                    tools:text="12-12-12"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/orangedark"
+            fitpassicicifonticon="@{FontIconConstant.INSTANCE.ICON_RIGHT}"
+            />
+
+
+    </RelativeLayout>
+</layout>

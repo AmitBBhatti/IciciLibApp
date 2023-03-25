@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
+        <variable
+            name="homedata"
+            type="com.fitpass.libfitpass.home.viewmodel.FitpassIciciViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue2"
+        >
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="162dp"
+            android:src="@drawable/intersection"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"/>
+        <include
+            android:id="@+id/rlHeader"
+            layout="@layout/fitpass_header"
+
+            />
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_above="@+id/rlCopyRight">
+            <LinearLayout
+                android:id="@+id/llDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/llApiDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_16dp"
+                    android:visibility="visible">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_20dp"
+                        tools:listitem="@layout/fitpass_icici_menu_row"
+                        tools:itemCount="3"
+                        icicimenuItems="@{homedata.productList}"
+                        icicimenuListener="@{homedata.fitpassiciciHomeListener}"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:visibility="@{homedata.workoutList.size()>0? View.VISIBLE : View.GONE}"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/myworkout"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/tvViewMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/viewmore"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="@color/orangedark"
+                            android:layout_alignParentRight="true"
+                            android:visibility="@{homedata.workoutList.size()>2? View.VISIBLE : View.GONE}"/>
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_11dp"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/fitpass_workout_row"
+                        iciciWorkoutItems="@{homedata.workoutList}"
+                        iciciworkoutListener="@{homedata.fitpassiciciHomeListener}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spf_pro_display_bold"
+                        textdata="@{homedata.faqheading}"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:visibility="@{homedata.faqList.size()>0? View.VISIBLE : View.GONE}"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFaq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/faq_row"
+                        faqItems="@{homedata.faqList}"
+                        android:layout_marginTop="11dp"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:layout_width="@dimen/_77dp"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+
+            >
+            <LinearLayout
+                android:id="@+id/llScanQr"
+                android:layout_width="@dimen/_77dp"
+                android:layout_height="@dimen/_77dp"
+                android:background="@drawable/white_circle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                android:visibility="@{homedata.isShowScanButton()? View.VISIBLE : View.GONE}"
+               >
+                <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="39.1dp"
+                    android:textColor="@color/dark_blue3"
+                    fitpassicicifonticon="@{FontIconConstant.INSTANCE.ICON_SCAN_QR}"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="11.5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/orangedark"
+                    android:text="@string/qrscan"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlCopyRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orangedark"
+            android:paddingHorizontal="@dimen/_10dp"
+            android:paddingVertical="8dp"
+            android:visibility="@{homedata.hasCopyRight? View.VISIBLE : View.GONE}">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                textdata="@{homedata.copyright}"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="CopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffff"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAlert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <include android:id="@+id/alertpopup"
+                layout="@layout/alert_popup"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

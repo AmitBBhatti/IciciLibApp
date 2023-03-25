@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <FrameLayout
+        android:id="@+id/faScan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.journeyapps.barcodescanner.BarcodeView
+            android:id="@+id/zxing_barcode_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:zxing_framing_rect_height="200dp"
+            app:zxing_framing_rect_width="200dp"
+            app:zxing_preview_scaling_strategy="fitXY"
+
+          />
+
+        <com.journeyapps.barcodescanner.ViewfinderView
+            android:id="@+id/zxing_viewfinder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:zxing_possible_result_points="@color/zxing_custom_possible_result_points"
+            app:zxing_result_view="@color/zxing_custom_result_view"
+            app:zxing_viewfinder_laser="@color/zxing_custom_viewfinder_laser"
+            app:zxing_viewfinder_laser_visibility="true"
+
+
+            app:zxing_viewfinder_mask="@color/zxing_custom_viewfinder_mask" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivScan"
+                android:layout_width="203dp"
+                android:layout_height="203dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="57dp"
+                android:background="@drawable/scanner_view_bakground" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="203dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ivScan"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llFlash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:background="@drawable/gray_circle">
+
+                        <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                            android:id="@+id/faFlash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/spf_prodisplay_regular"
+                        android:gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="@string/flash"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlScanGalley"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/gray_circle"
+                    android:gravity="center">
+
+                    <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                        android:id="@+id/faScanFromGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvScanGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlScanGalley"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/spf_prodisplay_regular"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:text="@string/scanfromgallery"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/llRefreshLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/gray_circle">
+
+                        <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+                            android:id="@+id/faRefreshLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/spf_prodisplay_regular"
+                        android:gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="@string/refreshlocation"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</merge>
