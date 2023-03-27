@@ -61,7 +61,6 @@ class FitpassIciciWorkoutAdapter (val context: Context,val fitpassHomeListener: 
                 holder.binding.tvStatus.visibility=View.GONE
                 holder.binding.tvDate.setText(Util.convertMiliesToDD_MM_HH_MMDateTime2(data.start_time.toString(), true))
 
-
             }
 
 

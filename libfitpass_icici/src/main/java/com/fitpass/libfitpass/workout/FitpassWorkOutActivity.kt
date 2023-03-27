@@ -54,6 +54,7 @@ class FitpassWorkOutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fitpass_work_out);
+        binding.webview.setBackgroundColor(0);
         getIntentData()
         setHeader()
         setPadding()

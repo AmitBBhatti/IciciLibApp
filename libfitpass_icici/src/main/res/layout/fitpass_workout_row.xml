@@ -40,7 +40,7 @@
             android:layout_marginLeft="10dp"
             android:orientation="vertical"
             android:layout_toRightOf="@+id/ivLogo"
-            android:layout_marginRight="@dimen/_50dp"
+            android:layout_marginRight="40dp"
             >
 
             <TextView
@@ -86,7 +86,6 @@
                     android:textColor="@color/black4"
                     android:textSize="10sp"
                     tools:text="12-12-12"/>
-
 
             </LinearLayout>
 

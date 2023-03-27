@@ -28,9 +28,9 @@ class FitpassWebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fitpass_web_view2)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fitpass_web_view2);
+        binding.webview.setBackgroundColor(0);
         url=intent.getStringExtra("url")!!
         copyright=intent.getStringExtra("copyright")!!
-
         setHeader()
         setPadding()
         onClick()

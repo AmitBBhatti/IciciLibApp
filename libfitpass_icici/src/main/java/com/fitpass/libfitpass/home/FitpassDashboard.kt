@@ -113,10 +113,16 @@ class FitpassDashboard : AppCompatActivity(), View.OnClickListener ,Fitpassicici
         })
 
 
+
+
+
+    }
+
+    override fun onStart() {
+        super.onStart()
         if(getIntentData()) {
             getHomeData()
         }
-
 
     }
     fun init(){
