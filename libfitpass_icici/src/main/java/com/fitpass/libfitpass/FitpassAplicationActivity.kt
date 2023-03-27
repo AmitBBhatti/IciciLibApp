@@ -1,8 +1,9 @@
 package com.fitpass.libfitpass
 
 import android.app.Application
-import android.support.multidex.MultiDex
+
 import android.util.Log
+import androidx.multidex.MultiDex
 import com.webengage.sdk.android.WebEngageActivityLifeCycleCallbacks
 import com.webengage.sdk.android.WebEngageConfig
 
