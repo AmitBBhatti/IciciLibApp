@@ -110,7 +110,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.AmitBBhatti'
                 artifactId = 'libfitpass_icici'
-                version = '1.0.1'
+                version = '1.0.2'
             }
         }
     }
