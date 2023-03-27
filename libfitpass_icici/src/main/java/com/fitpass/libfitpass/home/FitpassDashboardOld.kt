@@ -483,7 +483,7 @@ class FitpassDashboardOld : AppCompatActivity(), FitpassHomeListener {
     override fun onMenuClick(data: Product) {
         weburl = data.redircet_url
         this.show_header = data.show_header
-       checkGoogleFitPermission()
+       //checkGoogleFitPermission()
        /* var intent = Intent(this, FitpassChallengeActivity::class.java)
         startActivity(intent)*/
 
@@ -578,6 +578,7 @@ class FitpassDashboardOld : AppCompatActivity(), FitpassHomeListener {
         Log.d("weburl", weburl)
     }
 
+/*
     fun checkGoogleFitPermission(){
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.Q) {
             if (ContextCompat.checkSelfPermission(
@@ -596,4 +597,5 @@ class FitpassDashboardOld : AppCompatActivity(), FitpassHomeListener {
             homeViewModel!!.buildFitnessClient()
         }
     }
+*/
 }

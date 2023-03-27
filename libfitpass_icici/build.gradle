@@ -90,13 +90,13 @@ dependencies {
     //implementation 'com.android.support:multidex:1.0.1'
 
     implementation "androidx.multidex:multidex:2.0.1"
-    implementation 'com.webengage:android-sdk:3.+'
+   // implementation 'com.webengage:android-sdk:3.+'
     implementation 'com.android.installreferrer:installreferrer:1.1.1'
     //implementation 'com.google.android.gms:play-services-ads:21.1.0'
     implementation 'com.squareup.picasso:picasso:2.8'
 
-    implementation("com.google.android.gms:play-services-fitness:21.1.0")
-    implementation("com.google.android.gms:play-services-auth:20.4.1")
+  /*  implementation("com.google.android.gms:play-services-fitness:21.1.0")
+    implementation("com.google.android.gms:play-services-auth:20.4.1")*/
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

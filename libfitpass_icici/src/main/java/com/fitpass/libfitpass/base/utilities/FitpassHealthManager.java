@@ -4,8 +4,7 @@ import static java.text.DateFormat.getDateInstance;
 
 import android.util.Log;
 
-import com.google.android.gms.fitness.data.DataType;
-import com.google.android.gms.fitness.request.DataReadRequest;
+
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,7 +14,7 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class FitpassHealthManager {
-    public static DataReadRequest queryFitnessData() {
+    /*public static DataReadRequest queryFitnessData() {
         //[START build_read_data_request]
         //Setting a start and end date using a range of 1 week before this moment.
         Calendar cal = Calendar.getInstance();
@@ -76,6 +75,6 @@ public class FitpassHealthManager {
                 .build();
         // [END build_read_data_request]
         return readRequest;
-    }
+    }*/
 
 }

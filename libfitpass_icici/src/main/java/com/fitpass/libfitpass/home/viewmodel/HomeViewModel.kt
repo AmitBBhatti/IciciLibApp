@@ -20,7 +20,7 @@ import com.fitpass.libfitpass.base.customview.CustomToastView
 import com.fitpass.libfitpass.base.dataencription.RandomKeyGenrator
 import com.fitpass.libfitpass.base.fitpasscomparators.FitpassLowtoHighComparator
 import com.fitpass.libfitpass.base.http_client.CustomLoader
-import com.fitpass.libfitpass.base.utilities.FitpassHealthManager
+
 import com.fitpass.libfitpass.base.utilities.FitpassPrefrenceUtil
 import com.fitpass.libfitpass.home.FitpassWebViewActivityOld
 import com.fitpass.libfitpass.home.http_client.ApiConstants
@@ -31,13 +31,8 @@ import com.fitpass.libfitpass.home.models.*
 import com.fitpass.libfitpass.home.models.List
 import com.fitpass.libfitpass.scanqrcode.FitpassScanQrCodeActivity
 import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.common.api.Scope
-import com.google.android.gms.fitness.Fitness
-import com.google.android.gms.fitness.data.DataSet
-import com.google.android.gms.fitness.data.DataType
-import com.google.android.gms.fitness.data.Field
-import com.google.android.gms.fitness.result.DataReadResult
 import com.google.gson.Gson
+
 import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -220,7 +215,7 @@ class HomeViewModel(
         context.startActivity(intent)
     }
 
-    public fun buildFitnessClient() {
+  /*  public fun buildFitnessClient() {
         try {
 
             //if (mClient == null) {
@@ -228,8 +223,8 @@ class HomeViewModel(
                 mClient = GoogleApiClient.Builder(context)
                     .addApi(Fitness.HISTORY_API)
                     .addApi(Fitness.CONFIG_API)
-                     /* .addScope(Scope(Scopes.FITNESS_ACTIVITY_READ))
-                      .addScope(Scope(Scopes.FITNESS_ACTIVITY_READ_WRITE))*/
+                     *//* .addScope(Scope(Scopes.FITNESS_ACTIVITY_READ))
+                      .addScope(Scope(Scopes.FITNESS_ACTIVITY_READ_WRITE))*//*
                     .addScope(Scope("https://www.googleapis.com/auth/fitness.activity.read"))
                     .addScope(Scope("https://www.googleapis.com/auth/fitness.activity.write"))
                     .addConnectionCallbacks(
@@ -270,10 +265,10 @@ class HomeViewModel(
                         )
                     }
                     .build()
-           /* } else {
+           *//* } else {
               //  InsertAndVerifyDataTask().execute()
 
-            }*/
+            }*//*
 
         } catch (e: Exception) {
             Log.d("GOOGLE_FIT_build", e.toString())
@@ -300,14 +295,14 @@ class HomeViewModel(
                     if (totalSet!!.isEmpty) 0 else totalSet.dataPoints[0].getValue(Field.FIELD_STEPS)
                         .asInt().toLong()
                 Log.e("insertandvestepsucc", "issuccess2")
-                /* activiity.runOnUiThread(java.lang.Runnable {
+                *//* activiity.runOnUiThread(java.lang.Runnable {
                      Toast.makeText(context, "Success: " + total.toString(), Toast.LENGTH_SHORT)
                          .show()
-                 })*/
+                 })*//*
             } else {
-                /* activiity.runOnUiThread(java.lang.Runnable {
+                *//* activiity.runOnUiThread(java.lang.Runnable {
                      Toast.makeText(context, "Fail: " + total.toString(), Toast.LENGTH_SHORT).show()
-                 })*/
+                 })*//*
 
                 Log.e("insertandvestepsucc", "issuccess3")
                 Log.w("", "There was a problem getting the step count.")
@@ -379,7 +374,7 @@ class HomeViewModel(
             }
         }
 
-    }
+    }*/
 
 
 }
