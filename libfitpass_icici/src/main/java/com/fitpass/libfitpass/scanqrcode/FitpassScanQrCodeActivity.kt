@@ -21,6 +21,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.fitpass.libfitpass.R
@@ -43,6 +44,7 @@ import com.google.zxing.*
 import com.google.zxing.common.HybridBinarizer
 import com.journeyapps.barcodescanner.*
 import org.json.JSONObject
+import java.io.File
 import java.io.InputStream
 
 
@@ -75,7 +77,8 @@ class FitpassScanQrCodeActivity : AppCompatActivity(), FitpassScanListener {
     var position: Int = 0
     var isGalleyOpen: Boolean = false
     lateinit var workoutdata: Workoutlist
-
+    var STORAGE_PERMISSION_COE = 100
+    var STORAGE_PERMISSION_CODE_TIRAMISU: Int = 150
     companion object {
         var user_schedule_id: String = "0"
         lateinit var tvStatus: TextView
@@ -266,11 +269,11 @@ class FitpassScanQrCodeActivity : AppCompatActivity(), FitpassScanListener {
             }
         }
         rlScanGalley!!.setOnClickListener {
+         requestStoragePermission()
 
-            openGallery()
         }
         tvScanGallery!!.setOnClickListener {
-            openGallery()
+            requestStoragePermission()
         }
         llRefreshLocation!!.setOnClickListener {
             val manager: LocationManager = getSystemService(LOCATION_SERVICE) as LocationManager
@@ -389,6 +392,37 @@ class FitpassScanQrCodeActivity : AppCompatActivity(), FitpassScanListener {
             } else {
             }
         }
+        if (requestCode == STORAGE_PERMISSION_CODE_TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
+                == PackageManager.PERMISSION_DENIED
+            ) {
+
+                alert(resources.getString(R.string.turnonstorage), resources.getString(R.string.storagemsg))
+
+
+            } else if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("onRequestResult", "PERMISSION_GRANTED")
+
+                openGallery()
+
+            }
+        }
+        if (requestCode == STORAGE_PERMISSION_COE) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_DENIED || ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+                == PackageManager.PERMISSION_DENIED
+            ) {
+                alert(resources.getString(R.string.turnonstorage), resources.getString(R.string.storagemsg))
+
+            } else if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("onRequestResult", "PERMISSION_GRANTED")
+                openGallery()
+            }
+        }
+
     }
 
     fun alert(title: String, msg: String) {
@@ -501,18 +535,53 @@ class FitpassScanQrCodeActivity : AppCompatActivity(), FitpassScanListener {
                     val result = reader.decode(bBitmap)
                     Log.d("QRCode", result.getText() + "...")
                     getScanDetail(result.getText())
-                } catch (e: NotFoundException) {
-                    CustomToastView.errorToasMessage(
-                        this,
-                        this,
-                        "No QR Code detected. Please try again"
-                    )
+                } catch (e: Exception) {
+                    try {
+                        val fileCompressor = FitpassFileCompressor(this)
+                        var file = File(getRealPathFromURI(mImageCaptureUri))
+                        file = fileCompressor!!.compressToFontFile3(file)
+                        Log.d("fileSize2", file.length().toString() + "..")
+                        mImageCaptureUri =
+                            FileProvider.getUriForFile(this, "com.india.fitpass.provider", file)
+                        var bitmap = FitpassImageUtil.getBitmapFormUri(this, mImageCaptureUri)
+
+                        if (bitmap == null) {
+                            Log.e("TAG", "uri is not a bitmap," + mImageCaptureUri.toString())
+                            return
+                        }
+                        val width: Int = bitmap.getWidth()
+                        val height: Int = bitmap.getHeight()
+                        val pixels = IntArray(width * height)
+                        bitmap.getPixels(pixels, 0, width, 0, 0, width, height)
+                        bitmap.recycle()
+                        bitmap = null
+                        val source = RGBLuminanceSource(width, height, pixels)
+                        val bBitmap = BinaryBitmap(HybridBinarizer(source))
+                        val reader = MultiFormatReader()
+                        val result = reader.decode(bBitmap)
+                        getScanDetail(result.getText())
+                    }catch (e: Exception){
+                        CustomToastView.errorToasMessage(
+                            this,
+                            this,
+                            "No QR Code detected. Please try again"
+                        )
+                    }
+
 
                 }
 
             }
         }
 
+    }
+
+    fun getRealPathFromURI(uri: Uri?): String? {
+        val proj = arrayOf(MediaStore.Audio.Media.DATA)
+        val cursor = managedQuery(uri, proj, null, null, null)
+        val column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
+        cursor.moveToFirst()
+        return cursor.getString(column_index)
     }
 
     fun getScanDetail(qrcode: String) {
@@ -567,4 +636,52 @@ class FitpassScanQrCodeActivity : AppCompatActivity(), FitpassScanListener {
         longitude = FitpassPrefrenceUtil.getStringPrefs(this, FitpassPrefrenceUtil.LONGITUDE, "0.0")
             .toString()
     }
+
+    private fun requestStoragePermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+            if (ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                requestPermissions(
+                    arrayOf(
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                    ),
+                    STORAGE_PERMISSION_COE
+                )
+
+            } else {
+                openGallery()
+
+
+            }
+        } else {
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.TIRAMISU) {
+                if (ActivityCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.READ_MEDIA_IMAGES
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    requestPermissions(
+                        arrayOf(
+                            Manifest.permission.READ_MEDIA_IMAGES
+                        ),
+                        STORAGE_PERMISSION_CODE_TIRAMISU
+                    )
+
+                } else {
+                    openGallery()
+
+
+                }
+            }else{
+                openGallery()
+            }
+
+        }
+    }
+
 }

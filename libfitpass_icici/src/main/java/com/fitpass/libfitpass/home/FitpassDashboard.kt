@@ -277,6 +277,16 @@ class FitpassDashboard : AppCompatActivity(), View.OnClickListener ,Fitpassicici
             Log.d("url4",url+"..");
             binding.llDetail.visibility=View.VISIBLE
             binding.llApiDetail.visibility=View.VISIBLE
+            if((context as FitpassDashboard).homeViewModel!!.hasCopyRight!!.value!!){
+                (context as FitpassDashboard).binding.rlCopyRight.visibility=View.VISIBLE
+            }else{
+                (context as FitpassDashboard).binding.rlCopyRight.visibility=View.GONE
+            }
+            if((context as FitpassDashboard).homeViewModel!!.isShowScanButton!!.value!!){
+                (context as FitpassDashboard).binding.llScanQr.visibility=View.VISIBLE
+            }else{
+                (context as FitpassDashboard).binding.llScanQr.visibility=View.GONE
+            }
             //binding.llScanQr.visibility=View.VISIBLE
             CustomLoader.hideLoaderDialog(activity)
            /* Handler().postDelayed(Runnable {

@@ -144,7 +144,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:elevation="2dp"
-                android:visibility="@{homedata.isShowScanButton()? View.VISIBLE : View.GONE}"
+                android:visibility="gone"
                >
                 <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
                     android:layout_width="wrap_content"
@@ -172,7 +172,8 @@
             android:background="@color/orangedark"
             android:paddingHorizontal="@dimen/_10dp"
             android:paddingVertical="8dp"
-            android:visibility="@{homedata.hasCopyRight? View.VISIBLE : View.GONE}">
+            android:visibility="gone"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

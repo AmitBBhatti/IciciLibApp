@@ -43,8 +43,7 @@ class FitpassIciciWorkoutAdapter (val context: Context,val fitpassHomeListener: 
         holder.binding.tvStatus.visibility=View.VISIBLE
             if (data.workout_status.equals("3")) {
                 holder.binding.tvStatus.setTextColor(context.resources.getColor(R.color.green3))
-                holder.binding.tvDate.visibility=View.GONE
-/*
+               // holder.binding.tvDate.visibility=View.VISIBLE
                 if (data.urc_updated_time != null) {
                     if (data.urc_updated_time > 0) {
                         holder.binding.tvDate.setText(Util.convertMiliesToDD_MM_HH_MMDateTime2(data.urc_updated_time.toString(), true))
@@ -53,7 +52,6 @@ class FitpassIciciWorkoutAdapter (val context: Context,val fitpassHomeListener: 
                 else {
                     holder.binding.tvDate.setText(Util.convertMiliesToDD_MM_HH_MMDateTime2(data.start_time.toString(), true))
                 }
-*/
             }
             else if (data.workout_status.equals("1")) {
                 holder.binding.tvStatus.setTextColor(context.resources.getColor(R.color.orangedark))
