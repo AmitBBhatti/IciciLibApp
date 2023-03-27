@@ -318,6 +318,7 @@ class FitpassDashboard : AppCompatActivity(), View.OnClickListener ,Fitpassicici
         var intent = Intent(this, FitpassWebViewActivity::class.java)
         intent.putExtra("url", weburl)
         intent.putExtra("show_header", show_header)
+        intent.putExtra("copyright", homeViewModel!!.copyright.value)
         startActivity(intent)
     }
 

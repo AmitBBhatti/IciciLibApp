@@ -5,21 +5,21 @@
     <data>
         <import type="android.view.View" />
         <import type="com.fitpass.libfitpass.base.constants.FontIconConstant" />
-        <variable
-            name="homedata"
-            type="com.fitpass.libfitpass.home.viewmodel.FitpassIciciViewModel" />
+
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dark_blue2"
         >
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="162dp"
-            android:src="@drawable/intersection"
+        <com.fitpass.libfitpass.fontcomponent.FitpassFontAwesome
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue4"
+            android:textSize="170dp"
             android:layout_alignParentRight="true"
-            android:scaleType="fitXY"/>
+            intfonticon="@{FontIconConstant.INSTANCE.RIGHT_IMAGE_ICON}"
+            />
         <include
             android:id="@+id/rlHeader"
             layout="@layout/fitpass_header"
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_above="@+id/rlCopyRight"
             >
             <WebView
                 android:id="@+id/webview"
@@ -39,6 +40,29 @@
 
 
         </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlCopyRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orangedark"
+            android:paddingHorizontal="@dimen/_10dp"
+            android:paddingVertical="8dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tvCoptRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="CopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffffCopyfgfffffffffff"
+                />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 </layout>

@@ -28,12 +28,9 @@ class MainActivity : AppCompatActivity() {
     }
     fun click(view: View) {
         var intent=Intent(this,FitpassDashboard::class.java)
-        //var intent=Intent(this,Test::class.java)
         intent.putExtra("vendor_id", "210")
         intent.putExtra("policy_number", "106830313")
         intent.putExtra("member_id", "516899111")
-        /* intent.putExtra("policy_number", "10683033")
-        intent.putExtra("member_id", "51689915")*/
         startActivity(intent)
     }
 }

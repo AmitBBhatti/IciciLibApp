@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
-        android:name=".FitpassAplicationActivity"
         android:allowBackup="true"
         android:fullBackupContent="@xml/my_backup_rules"
         android:largeHeap="true"

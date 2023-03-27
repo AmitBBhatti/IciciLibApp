@@ -7,6 +7,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -22,14 +23,18 @@ import java.lang.Exception
 class FitpassWebViewActivity : AppCompatActivity() {
     lateinit var binding:ActivityFitpassWebView2Binding
     var url=""
+    var copyright=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fitpass_web_view2)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fitpass_web_view2);
         url=intent.getStringExtra("url")!!
+        copyright=intent.getStringExtra("copyright")!!
+
         setHeader()
         setPadding()
         onClick()
+        setCopyRightData()
         binding.webview.setBackgroundColor(0);
         binding.webview.setWebViewClient(WebViewClientDemo(this, this));
         binding.webview.setWebChromeClient(WebChromeClientDemo(this));
@@ -37,6 +42,14 @@ class FitpassWebViewActivity : AppCompatActivity() {
         binding.webview.getSettings().setDomStorageEnabled(true);
         showLoader()
         binding.webview.loadUrl(url);
+    }
+    fun setCopyRightData(){
+        if(!copyright.isNullOrEmpty()){
+            binding.rlCopyRight.visibility= View.VISIBLE
+            binding.tvCoptRight.setText(copyright)
+        }else{
+            binding.rlCopyRight.visibility= View.GONE
+        }
     }
     fun onClick(){
         binding.rlHeader.rlBack.setOnClickListener {
@@ -48,7 +61,6 @@ class FitpassWebViewActivity : AppCompatActivity() {
         var fitpassConfig = FitpassConfig.getInstance()
         if (!fitpassConfig!!.getHeaderColor().isNullOrEmpty()) {
             FitpassConfigUtil.setStatusBarColor(this, this, fitpassConfig.getHeaderColor())
-
         }
         if (!fitpassConfig!!.getHeaderTitle().isNullOrEmpty()) {
             binding.rlHeader.tvHeader.setText(fitpassConfig!!.getHeaderTitle())

@@ -59,7 +59,8 @@ public object FontIconConstant {
         val LOGO_ICON = 0xe939
         val ACTIVE_ICON = 0xe94b
         val SCAN_ICON = 0xe93b
-        /*Challenge Constant*/
+        val RIGHT_IMAGE_ICON = 0xe96c
+
 
 
 

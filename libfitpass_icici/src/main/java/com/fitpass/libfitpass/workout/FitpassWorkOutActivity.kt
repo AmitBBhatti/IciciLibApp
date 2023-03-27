@@ -80,6 +80,8 @@ class FitpassWorkOutActivity : AppCompatActivity() {
             var jsonObject=JSONObject(viewallworkout)
             upcomingUrl=jsonObject.optString("upcoming_workout")
             completeUrl=jsonObject.optString("past_workout")
+            binding.tvUpcomming.setText(jsonObject.optString("upcoming_label"))
+            binding.tvCompleted.setText(jsonObject.optString("past_label"))
 
         }
 
